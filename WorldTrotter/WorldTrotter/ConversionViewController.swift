@@ -45,7 +45,13 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let textFieldSeparator = textField.text?.range(of: ".")
         let replacementSeparator = string.range(of: ".")
-
+        let alphabets = CharacterSet.letters
+        let range = string.rangeOfCharacter(from: alphabets)
+        
+        if range != nil {
+            return false
+        }
+        
         if textFieldSeparator != nil && replacementSeparator != nil {
             return false
         } else {
