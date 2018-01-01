@@ -67,6 +67,7 @@ fastlane/test_output
 
 ## Other
 *.DS_Store
+*OSWithSwift-solutions-2015.11.20
 
 ### Xcode Patch ###
 *.xcodeproj/*
